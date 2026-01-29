@@ -31,6 +31,16 @@ cd tripo-server
 pip install -r requirements.txt
 ```
 
+**下载模型：**
+
+启动前，请运行以下脚本下载所需的去背景模型 (`u2net.onnx`)：
+
+```bash
+python download_models.py
+```
+
+> 如果下载速度慢，您也可以手动下载 [u2net.onnx](https://github.com/danielgatis/rembg/releases/download/v0.0.0/u2net.onnx) 并将其放入 `tripo-server/.u2net/` 目录中。
+
 启动 Python 服务：
 
 ```bash
@@ -39,8 +49,6 @@ python service.py
 ```
 
 服务将在 `http://localhost:8000` 上启动。
-
-> **注意**：首次运行或如果 `.u2net` 目录不存在，需要下载 `u2net.onnx` 模型并放置在 `tripo-server/.u2net/` 目录下。
 
 ### 2. 设置 Web Server (Node.js)
 

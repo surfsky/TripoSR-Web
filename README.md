@@ -31,6 +31,14 @@ cd tripo-server
 pip install -r requirements.txt
 ```
 
+**Download Models:**
+
+Before starting, download the required background removal model:
+
+```bash
+python download_models.py
+```
+
 Start the Python service:
 
 ```bash
