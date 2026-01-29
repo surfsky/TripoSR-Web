@@ -1,5 +1,7 @@
 # TripoSR Web Application
 
+[中文文档](README_CN.md) | [TripoSR Original Project](https://github.com/VAST-AI-Research/TripoSR)
+
 This project is a web-based interface for **TripoSR**, a state-of-the-art 3D object reconstruction model. It allows users to upload a single image and generate a high-quality 3D model in seconds.
 
 ## Screenshot

@@ -1,5 +1,7 @@
 # TripoSR Web 应用程序
 
+[English README](README.md) | [TripoSR 原项目地址](https://github.com/VAST-AI-Research/TripoSR)
+
 本项目是 **TripoSR** 的 Web 界面，TripoSR 是一个先进的 3D 对象重建模型。用户可以上传单张图像，并在几秒钟内生成高质量的 3D 模型。
 
 ## 截图
