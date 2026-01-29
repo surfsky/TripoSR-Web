@@ -1,0 +1,69 @@
+[project]
+name = "torchmcubes"
+version = "0.1.0"
+description = "torchmcubes: Marching Cubes for PyTorch"
+readme = "README.md"
+authors = [
+  {name = "Tatsuya Yatagawa", email = "tatsy.mail@gmail.com"}
+]
+license = {file = "LICENSE"}
+classifiers = [
+  "Development Status :: 4 - Beta",
+  'Programming Language :: Python :: 3.9',
+  'Programming Language :: Python :: 3.10',
+  'Programming Language :: Python :: 3.11',
+  'Programming Language :: Python :: 3.12',
+]
+requires-python = ">=3.9"
+dependencies=["numpy", "torch"]
+
+[tool.scikit-build]
+build-dir = "build"
+minimum-version = "0.10"
+ninja.make-fallback = true
+logging.level = "INFO"
+build.verbose = true
+messages.after-success = "SUCCESS!!"
+messages.after-failure = "FAILURE!!"
+
+[tool.scikit-build.cmake]
+version = ">=3.15"
+source-dir = "."
+args = []
+
+[tool.scikit-build.wheel]
+license-files = ["LICENSE"]
+exclude = ["**/.mypy_cache/**", "**/build/**", "**/.vscode/**"]
+
+[build-system]
+requires = ["scikit-build-core>=0.10", "pybind11>=2.10", "cmake", "ninja"]
+build-backend = "scikit_build_core.build"
+
+[tool.isort]
+length_sort = true
+line_length = 120
+
+[tool.mypy]
+python_version = "3.11"
+follow_imports = "silent"
+disallow_any_generics = true
+strict_optional = true
+check_untyped_defs = true
+allow_redefinition = true
+
+[tool.flake8]
+max-line-length = 120
+ignore = "Q000,E203,W503,W504"
+
+[tool.yapf]
+based_on_style = "pep8"
+column_limit = 120
+indent_width = 4
+
+ALIGN_CLOSING_BRACKET_WITH_VISUAL_INDENT = true
+COALESCE_BRACKETS = false
+DEDENT_CLOSING_BRACKETS = false
+DISABLE_ENDING_COMMA_HEURISTIC = false
+INDENT_DICTIONARY_VALUE = false
+ALLOW_SPLIT_BEFORE_DICT_VALUE = false
+SPLIT_ARGUMENTS_WHEN_COMMA_TERMINATED = true
